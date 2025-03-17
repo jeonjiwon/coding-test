@@ -1,20 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
-string str;
-int res[100];
-int main(void){
-	ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-	cin >> str;
-	int mid_length = str.length() / 2;
-	int res = 1;
-	for(int i=0; i<mid_length; i++){
-		if(str[i] != str[str.length() - i - 1]){
-			res = 0;
-			break;
-		}
-	}
-	
-	cout << res;
-	
-	return 0;
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    string s, temp;
+    cin >> s;
+    temp = s;
+    reverse(temp.begin(), temp.end());
+    if(temp == s) cout << 1 << endl;
+    else cout << 0 << endl;
+
 }
